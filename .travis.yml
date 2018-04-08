@@ -1,9 +1,7 @@
 language: python
 
 install:
- - sudo apt install pep8
- - sudo apt install pygithub
-
+ - pip install pep8 pygithub
 matrix:
     include:
      - stage: Test
