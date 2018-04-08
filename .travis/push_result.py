@@ -26,7 +26,7 @@ def exit_code(job):
 
 def main():
     token = environ.get('GH_TOKEN')
-    job = envirin.get('JOB')
+    job = environ.get('JOB')
 
     body = log(job)
     if (body == ''):
