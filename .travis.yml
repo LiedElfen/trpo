@@ -1,7 +1,7 @@
 language: python
 
 install:
- - sudo apt install pep8
+ - sudo apt install pep8 pygithub
 
 matrix:
     include:
@@ -10,6 +10,11 @@ matrix:
      - stage: Analyse
        env: JOB=analyse
 
-script: ./.travis/$JOB.sh
+script:
+  - ./.travis/$JOB.sh 2>&1 | tee /tmp/$JOB.log
+  - echo "$(PIPESTATUS[0])" > /tmp/$JOB.res
 
-
+deploy:
+     - provider: script
+       script: python .travis/push_result.py
+       skip_cleanup: true
