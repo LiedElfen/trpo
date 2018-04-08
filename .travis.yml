@@ -1,7 +1,8 @@
 language: python
 
 install:
- - sudo apt install pep8 pygithub
+ - sudo apt install pep8
+ - sudo apt install pygithub
 
 matrix:
     include:
