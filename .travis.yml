@@ -5,7 +5,7 @@ matrix:
 	- stage: Test
 	  env: JOB=test
 	- stage: Analyse
-	  env: JOB=analase
+	  env: JOB=analyse
 
 script: ./.travis/$JOB.sh
 
