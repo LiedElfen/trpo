@@ -3,9 +3,7 @@ language: python
 matrix:
 	include:
 	- stage: Test
-	 env: JOB=test
-	- stage: Analyse
-	 env: JOB=analyse
+	  env: JOB=test
 
 script: ./.travis/@JOB.sh
 
