@@ -4,7 +4,9 @@ matrix:
 	include:
 	- stage: Test
 	  env: JOB=test
+	- stage: Analyse
+	  env: JOB=analase
 
-script: ./.travis/@JOB.sh
+script: ./.travis/$JOB.sh
 
 
