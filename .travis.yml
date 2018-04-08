@@ -1,5 +1,8 @@
 language: python
 
+install:
+ - sudo apt install pep8
+
 matrix:
     include:
      - stage: Test
