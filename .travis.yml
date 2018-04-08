@@ -20,3 +20,8 @@ deploy:
        skip_cleanup: true
        on:
            all_branches: true
+     - provider: script
+       script: .travis/docker_push.sh
+
+before_install:
+ - docker build -t liedelfen/trpo .
