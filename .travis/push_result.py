@@ -21,10 +21,6 @@ def log(job):
 def exit_code(job):
     filename = '/tmp/{}.res'.format(job)
     with open(filename) as f:
-        # if (f.read().split() == ''):
-        #    return  0
-        # else:
-        #    return  1
          return int(f.read().strip())
 
 def main():
@@ -38,7 +34,7 @@ def main():
     res = exit_code(job)
 
     g = Github(token)
-    repo = g.get_repo("/liedelfen/trpo")
+    repo = g.get_repo("LiedElfen/trpo")
 
     branch = git_current_branch()
     ISSUE = 'issue'
@@ -48,7 +44,7 @@ def main():
     else:
        if res == 0:
           return;
-       issue = repo.create_issue("Nightly build failed")
+       issue = repo.create_issue("Nightly build failed","Travis nightly build failed")
 
     START_BODY = '## Travis {} result'.format(job)
     comment = None
