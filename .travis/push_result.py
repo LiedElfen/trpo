@@ -42,7 +42,7 @@ def main():
 
     branch = git_current_branch()
     ISSUE = 'issue'
-    if branch.starswith(ISSURE):
+    if branch.startswith(ISSURE):
        issure_num = num(branch[len(ISSURE):])
        issure = repo.get_issure(issure_num)
     else:
