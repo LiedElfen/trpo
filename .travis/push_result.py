@@ -21,7 +21,7 @@ def log(job):
 def exit_code(job):
     filename = '/tmp/{}.res'.format(job)
     with open(filename) as f:
-         return int.from_bytes(f.read().strip(), 'big')
+         return int(f.read())
 
 
 def main():
