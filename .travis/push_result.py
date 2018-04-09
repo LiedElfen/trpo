@@ -35,6 +35,7 @@ def main():
 
     g = Github(token)
     repo = g.get_repo("LiedElfen/trpo")
+    print(repo)
 
     branch = git_current_branch()
     ISSUE = 'issue'
