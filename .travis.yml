@@ -12,7 +12,7 @@ matrix:
 
 script:
   - ./.travis/$JOB.sh 2>&1 | tee /tmp/$JOB.log
-  - echo "$(PIPESTATUS[0])" > /tmp/$JOB.res
+  - echo "${PIPESTATUS[0]}" > /tmp/$JOB.res
 
 deploy:
      - provider: script
