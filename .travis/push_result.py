@@ -38,7 +38,7 @@ def main():
     res = exit_code(job)
 
     g = Github(token)
-    repo = g.get_repo("liedelfen/trpo")
+    repo = g.get_repo("/liedelfen/trpo")
 
     branch = git_current_branch()
     ISSUE = 'issue'
