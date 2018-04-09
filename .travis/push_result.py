@@ -42,17 +42,17 @@ def main():
 
     branch = git_current_branch()
     ISSUE = 'issue'
-    if branch.startswith(ISSURE):
-       issure_num = num(branch[len(ISSURE):])
-       issure = repo.get_issure(issure_num)
+    if branch.startswith(ISSUE):
+       issue_num = num(branch[len(ISSUE):])
+       issue = repo.get_issue(issue_num)
     else:
        if res == 0:
           return;
-       issure = repo.create_issure('Nightly build failed', 'Travis nightly build failed')
+       issue = repo.create_issue('Nightly build failed', 'Travis nightly build failed')
 
     START_BODE = '## Travis {} result'.format(job)
     comment = None
-    for c in issure.get_comments():
+    for c in issue.get_comments():
         if c.body.startswith(START_BODY):
            comment = c
 
@@ -60,7 +60,7 @@ def main():
     if comment:
        comment.edit(body)
     else:
-       issure.create_comment(body)
+       issue.create_comment(body)
 
 if __name__ == "__main__":
      main()
