@@ -33,7 +33,7 @@ def main():
 
     res = exit_code(job)
 
-    g = Github(token)
+    g = Github("liedelfen","ElfenLied113322")
     repo = g.get_repo("LiedElfen/trpo")
     print(repo)
 
