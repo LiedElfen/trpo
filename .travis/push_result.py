@@ -21,7 +21,10 @@ def log(job):
 def exit_code(job):
     filename = '/tmp/{}.res'.format(job)
     with open(filename) as f:
-         return int(f.read())
+         if (f.read().split() == ''):
+             return  0
+         else:
+             return  1
 
 
 def main():
