@@ -44,7 +44,7 @@ def main():
     else:
        if res == 0:
           return;
-       issue = repo.create_issue("Nightly build failed","Travis nightly build failed")
+       issue = repo.create_issue("Nightly build","Travis build")
 
     START_BODY = '## Travis {} result'.format(job)
     comment = None
