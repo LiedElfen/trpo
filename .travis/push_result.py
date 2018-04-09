@@ -50,7 +50,7 @@ def main():
           return;
        issue = repo.create_issue('Nightly build failed', 'Travis nightly build failed')
 
-    START_BODE = '## Travis {} result'.format(job)
+    START_BODY = '## Travis {} result'.format(job)
     comment = None
     for c in issue.get_comments():
         if c.body.startswith(START_BODY):
