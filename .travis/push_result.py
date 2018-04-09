@@ -4,7 +4,7 @@ from os.path import isfile, join
 from os import environ, listdir
 
 
-def git_curret_branch():
+def git_current_branch():
     with open('.git/HEAD') as f:
          body = f.read()
 
