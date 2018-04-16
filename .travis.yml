@@ -1,7 +1,7 @@
 language: python
 
 install:
- - pip install pep8 pygithub
+ - pip install pycodesty pygithub
 
 matrix:
     include:
