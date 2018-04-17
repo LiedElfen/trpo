@@ -1,7 +1,7 @@
 language: python
 
 install:
- - pip install pycodestyle pygithub
+ - pip install pecodestyle pygithub
 
 matrix:
     include:
